@@ -1,15 +1,21 @@
 <template>
-  <HarvestData />
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/analytics">Collection analytics</router-link></li>
+        <li><router-link to="/objectlookup">Object lookup</router-link></li>
+        <li><router-link to="/blocklist">Blocklist</router-link></li>
+        <li><router-link to="/harvest">Harvest</router-link></li>
+      </ul>
+    </div>
+  </nav>
+  <router-view />
 </template>
 
 <script>
-import HarvestData from "./components/HarvestData.vue";
-
 export default {
   name: "App",
-  components: {
-    HarvestData,
-  },
 };
 </script>
 

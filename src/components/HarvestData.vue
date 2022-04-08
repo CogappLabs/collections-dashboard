@@ -1,10 +1,7 @@
 <template>
   <div class="container">
-    <h3>Collections data (from latest harvest data)</h3>
-    <p>
-      This should perhaps come from the collections data rather than harvest
-      data
-    </p>
+    <h3>Collections data</h3>
+
     <div v-if="latestHarvestData">
       <ul class="collection">
         <li class="collection-item avatar">

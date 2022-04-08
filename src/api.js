@@ -39,14 +39,76 @@ const getHarvestDataQuery = `
   }
 }`;
 
-function getCollectionObjectQuery(objectNumber) {
+const getCollectionObjectQuery = (objectNumber) => {
   return `
     {
-        collectionObject (objectNumber: ${objectNumber}) {
-          title
+        collectionObject (objectNumber: "${objectNumber}") {
+            title
+            description
+            additionalInformation
+            classification
+            objectNumber
+            type
+            creditLine
+            itemCount
+            materials
+            measurements
+            revisionDate
+            dateMade
+            weight
+            siteLocation
+            placeMade
+            productionPhase
+            copyrightRestrictions
+            totalRuntime
+            videoFormat
+            encapsulation
+            soundtrackType
+            imageFormat
+            photoMedium
+            scale
+            planType
+            majorCollections
+            namedCollections
+            nomenclature
+            media {
+                id
+                type
+                caption
+                copyrightRestrictions
+                creditLine
+                file {
+                    filename
+                    mimeType
+                    publicUrl
+                }
+            }
+            constituents {
+                id
+                name
+                individual
+                briefBiography
+                website
+                biographyFile {
+                    contents
+                    size
+       }
+                media {
+                    id
+                    type
+                    caption
+                    copyrightRestrictions
+                    creditLine
+                        file {
+                            filename
+                            mimeType
+                            publicUrl
+                        }
+                }
         }
-    }`;
-}
+    }
+}`;
+};
 
 export default {
   getLatestHarvestData() {
@@ -70,10 +132,10 @@ export default {
         return response.data.data.querydataExtractorSummary;
       });
   },
-  getCollectionObject() {
+  getCollectionObject(objectNumber) {
     return axios
       .post(COLLECTIONS_ENDPOINT, {
-        query: getCollectionObjectQuery,
+        query: getCollectionObjectQuery(objectNumber),
       })
       .then((response) => {
         // this.harvestData = response.data.data.querydataExtractorSummary[0];
