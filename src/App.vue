@@ -7,6 +7,7 @@
         <li><router-link to="/objectlookup">Object lookup</router-link></li>
         <li><router-link to="/blocklist">Blocklist</router-link></li>
         <li><router-link to="/harvest">Harvest</router-link></li>
+        <li><router-link to="/facetedsearch">Facets</router-link></li>
       </ul>
     </div>
   </nav>

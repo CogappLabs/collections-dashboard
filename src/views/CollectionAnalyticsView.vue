@@ -6,7 +6,7 @@
     <ol>
       <li v-for="item in popularSearchTerms" v-bind:key="item">
         <a
-          :href="`https://mit-museum-frontend-git-develop-mit-museum.vercel.app/collections/search-results?query=${item.term}`"
+          :href="`https://mitmuseum.mit.edu/collections/search-results?query=${item.term}`"
           >{{ item.term }}: {{ item.count }}</a
         >
       </li>
@@ -15,7 +15,7 @@
     <ol>
       <li v-for="item in popularObjects" v-bind:key="item">
         <a
-          :href="`https://mit-museum-frontend-git-develop-mit-museum.vercel.app/collections/object/${item.objectNumber}`"
+          :href="`https://mitmuseum.mit.edu/collections/object/${item.objectNumber}`"
         >
           {{ item.title }}: {{ item.views }}</a
         >
