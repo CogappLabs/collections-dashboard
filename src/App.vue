@@ -8,6 +8,7 @@
         <li><router-link to="/blocklist">Blocklist</router-link></li>
         <li><router-link to="/harvest">Harvest</router-link></li>
         <li><router-link to="/facetedsearch">Facets</router-link></li>
+        <li><router-link to="/wikidatalookup">Wikidata lookup</router-link></li>
       </ul>
     </div>
   </nav>
